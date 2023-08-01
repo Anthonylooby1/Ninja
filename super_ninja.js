@@ -9,7 +9,7 @@ class Ninja {
 
     sayName() {
         console.log(`Ninja name is ${this.name}`)
-        return;
+        return this;
     }
 
     showStats() {
@@ -17,13 +17,13 @@ class Ninja {
         console.log(`Ninja stats are ${this.health}`)
         console.log(`Ninja stats are ${this.speed}`)
         console.log(`Ninja stats are ${this.strength}`)
-        return;
+        return this;
     }
 
     drinkSake() {
         this.health += 10;
         console.log(`health is now ${this.health}`)
-        return;
+        return this;
     }
 }
 const ninja1 = new Ninja("Hyabusa");
@@ -41,7 +41,9 @@ class Sensei extends Ninja {
     }
 
     speakWisdom() {
+        super.drinkSake();
         console.log("What one programmer can do in one month, two programmers can do in two months")
+        return this;
     }
 }
 const sensei1 = new Sensei('Tod')
