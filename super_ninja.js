@@ -50,3 +50,5 @@ const sensei1 = new Sensei('Tod')
 console.log(sensei1)
 sensei1.speakWisdom();
 sensei1.showStats();
+
+//eric, kye, christian, daisy, vivianna, josh fellow collaborators
